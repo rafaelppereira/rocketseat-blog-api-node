@@ -2,12 +2,16 @@ const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 
 const modelSchema = new mongoose.Schema({
-  title: String,
-  description: String,
-  author: String,
+  name: String,
+  plan: String,
+  dateReceipt: String,
+  birthDate: String,
+  cpf: String,
+  isDelete: Boolean,
+  isPending: Boolean,
 });
 
-const modelName = 'Posts';
+const modelName = 'Pacients';
 
 if (mongoose.connection && mongoose.connection.models[modelName]) {
   module.exports = mongoose.connection.models[modelName];
