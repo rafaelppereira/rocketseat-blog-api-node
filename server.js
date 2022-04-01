@@ -26,6 +26,6 @@ server.use(express.static(__dirname+'/public'));
 
 server.use('/api', apiRoutes);
 
-server.listen(5000, () => {
+server.listen(process.env.PORT || 5000, () => {
   console.log(`Server iniciado`);
 });
